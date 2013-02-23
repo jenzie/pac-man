@@ -6,11 +6,11 @@ These are the main features planned for each major and minor release.
 Version v0.0
 ============
 
-* Pacman can move in all four directions.
+* Pac-man can move in all four directions.
 * Movement is constrained within a bounded box that is the size of the screen.
 
 Version v0.1  
-* Walls confine the movement of Pacman.
+* Walls confine the movement of Pac-man.
 
 Version v0.2
 
@@ -25,7 +25,7 @@ Version v0.3
 Version v1.0
 ============
 
-* Pacman wins when all orbs are eaten.
+* Pac-man wins when all orbs are eaten.
 
 Version v1.1
 
@@ -35,29 +35,29 @@ Version v1.1
 
 Version v1.2
 
-* Pacman consumes a ghost on touch.
+* Pac-man consumes a ghost on touch.
 * Consumed ghosts add points to the score.
 
 Version v1.3
 
 * Power orbs are added to the playing field.
-* Pacman can consume a ghost only if he consumed a power orb.
+* Pac-man can consume a ghost only if he consumed a power orb.
 
 Version v1.4
 
-* Effects of a power orb lasts only 10 seconds.
-* When effects of a power orb expires, ghosts cannot be consumed until effect is regained.
+* Effects of a power orb last only 10 seconds.
+* When effects of a power orb expire, ghosts cannot be consumed until effect is regained.
 
 Version v1.5
 
 * Lives are implemented.
-* Pacman loses a life upon touch of a ghost without effects of a power orb.
+* Pac-man loses a life upon touch of a ghost without effects of a power orb.
 * Respawn screen is added.
 
 Version v2.0
 ============
 
-* Pacman loses when all lives are lost.
+* Pac-man loses when all lives are lost.
 
 Version v2.1
 
@@ -72,18 +72,18 @@ Version v2.2
 Version v2.3
 
 * Ghost movement speed is based on the difficulty.
-* Ghost movement towards Pacman is based on color.
+* Ghost movement towards Pac-man is based on color.
   * Ghost personalities are implemented.
 
 Version v3.0
 ============
 
-* Pacman progresses through multiple levels that vary in difficulty.
+* Pac-man progresses through multiple levels that vary in difficulty.
 
 Version v3.1
 
 * Bonus items are added to the playing field.
-* Pacman can consume the bonus items.
+* Pac-man can consume the bonus items.
 * Consumed bonus items add points to the score.
 
 Version v3.2
@@ -99,28 +99,28 @@ Version v3.3
 Version v4.0
 ============
 
-* Pacman gains bonus points.
+* Pac-man gains bonus points.
 
 Version v4.1
 
 * Save screen is added.
-* Player is given option to save name and highscore.
-* Highscores are saved to a textfile.
+* Player is given option to save name and high score.
+* High scores are saved to a textfile.
 
 Version v4.2
 
-* Option to view highscores is added.
-* Highscores are in order of most recent saves.
+* Option to display high scores in a table is added.
+* High scores are in order of most recent saves.
 
 Version v4.3
 
-* Option to sort highscores by name or score is implemented.
+* Option to sort high scores by name or score is implemented.
 * Option to sort in ascending or descending order is implemented.
 
 Version v5.0
 ============
 
-* Highscores are saved to a database and loaded upon program execution.
+* High scores are saved to a database and loaded upon program execution.
 
 Version v5.1
 
@@ -143,4 +143,4 @@ Version v5.4
 Version v6.0
 ============
 
-* Pacman gameplay able to be customized to change controls and sound.
+* Pac-man gameplay able to be customized to change controls and sound.
