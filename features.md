@@ -4,7 +4,7 @@ Features
 These are the main features planned for each major and minor release.
 
 Version v0.0
-============
+------------
 
 * Pac-man can move in all four directions.
 * Movement is constrained within a bounded box that is the size of the screen.
@@ -23,7 +23,7 @@ Version v0.3
 * Restart options are added.
 
 Version v1.0
-============
+------------
 
 * Pac-man wins when all orbs are eaten.
 
@@ -55,7 +55,7 @@ Version v1.5
 * Respawn screen is added.
 
 Version v2.0
-============
+------------
 
 * Pac-man loses when all lives are lost.
 
@@ -76,7 +76,7 @@ Version v2.3
   * Ghost personalities are implemented.
 
 Version v3.0
-============
+------------
 
 * Pac-man progresses through multiple levels that vary in difficulty.
 
@@ -97,7 +97,7 @@ Version v3.3
 * Maximum number of bonus items per level vary based on difficulty.
 
 Version v4.0
-============
+------------
 
 * Pac-man gains bonus points.
 
@@ -118,7 +118,7 @@ Version v4.3
 * Option to sort in ascending or descending order is implemented.
 
 Version v5.0
-============
+------------
 
 * High scores are saved to a database and loaded upon program execution.
 
@@ -141,6 +141,6 @@ Version v5.4
 * Settings are saved to a textfile and loaded upon program execution.
 
 Version v6.0
-============
+------------
 
 * Pac-man gameplay able to be customized to change controls and sound.
