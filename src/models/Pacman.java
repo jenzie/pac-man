@@ -1,5 +1,5 @@
 /**
- * author: Jenny Zhen
+ * @author Jenny Zhen
  * date: 02.23.12
  * language: Java
  * file: Pacman.java
@@ -11,12 +11,8 @@ package models;
 
 public class Pacman {
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public Pacman() {
+		
 	}
 
 }

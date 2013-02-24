@@ -1,5 +1,5 @@
 /**
- * author: Jenny Zhen
+ * @author Jenny Zhen
  * date: 02.23.12
  * language: Java
  * file: Pacman_controller.java
