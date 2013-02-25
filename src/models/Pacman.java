@@ -9,10 +9,13 @@
 
 package models;
 
-public class Pacman {
+import java.util.ArrayList;
 
+public class Pacman {
+	
 	public Pacman() {
 		
 	}
 
+	
 }
