@@ -17,4 +17,7 @@ Sources
 -------
 
 Descriptions for Gameplay and Enemies from:  
-http://en.wikipedia.org/w/index.php?title=Pac-Man&oldid=539262353
+http://en.wikipedia.org/w/index.php?title=Pac-Man&oldid=539262353  
+
+Sprite Sheet originally from Google:  
+http://www.freeimagehosting.net/uploads/be817e30c1.png
