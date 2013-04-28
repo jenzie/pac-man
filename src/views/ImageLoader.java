@@ -11,6 +11,7 @@
 package views;
 
 import javax.imageio.ImageIO;
+import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -25,13 +26,6 @@ public class ImageLoader {
 	private static ImageLoader loader;
 
 	private ImageLoader(){
-		try{
-			compositeImage = ImageIO.read(new File("src/images/pacman.png"));
-		}
-		catch(IOException e){
-			e.printStackTrace();
-			System.exit(1);
-		}
 	}
 
 	public static ImageLoader getImageLoaderInstance(){
@@ -43,14 +37,22 @@ public class ImageLoader {
 	public Image[][] getPacManImages(){
 		if(pacManImages == null){
 			pacManImages = new Image[4][2];
-			pacManImages[0][0] = compositeImage.getSubimage(2, 2, 15, 15);
-			pacManImages[0][1] = compositeImage.getSubimage(25, 2, 15, 15);
-			pacManImages[1][0] = compositeImage.getSubimage(43, 2, 15, 15);
-			pacManImages[1][1] = compositeImage.getSubimage(2, 23, 15, 15);
-			pacManImages[2][0] = compositeImage.getSubimage(21, 23, 15, 15);
-			pacManImages[2][1] = compositeImage.getSubimage(3, 3, 15, 15);
-			pacManImages[3][0] = compositeImage.getSubimage(3, 3, 15, 15);
-			pacManImages[3][1] = compositeImage.getSubimage(3, 3, 15, 15);
+			pacManImages[0][0] = new ImageIcon(getClass().getResource(
+					"/images/pacman_west1.png")).getImage();
+			pacManImages[0][1] = new ImageIcon(getClass().getResource(
+								"/images/pacman_west2.png")).getImage();
+			pacManImages[1][0] = new ImageIcon(getClass().getResource(
+								"/images/pacman_north1.png")).getImage();
+			pacManImages[1][1] = new ImageIcon(getClass().getResource(
+								"/images/pacman_north2.png")).getImage();
+			pacManImages[2][0] = new ImageIcon(getClass().getResource(
+								"/images/pacman_east1.png")).getImage();
+			pacManImages[2][1] = new ImageIcon(getClass().getResource(
+								"/images/pacman_east2.png")).getImage();
+			pacManImages[3][0] = new ImageIcon(getClass().getResource(
+								"/images/pacman_south1.png")).getImage();
+			pacManImages[3][1] = new ImageIcon(getClass().getResource(
+								"/images/pacman_south2.png")).getImage();
 		}
 		return pacManImages;
 	}

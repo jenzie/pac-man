@@ -18,6 +18,8 @@ public class Pacman {
 	private Image[][] pacmanImages;
 	private int direction;
 	private int positionX, positionY;
+	private int curFace = 0;
+	private int delay = 0;
 
 	public Pacman() {
 		ImageLoader loader = ImageLoader.getImageLoaderInstance();
@@ -25,7 +27,12 @@ public class Pacman {
 	}
 
 	public Image getGraphic(){
-		return pacmanImages[0][1];
+		delay += 1;
+		if(delay > 10){
+			delay = 0;
+			curFace = (curFace + 1) % 2;
+		}
+		return pacmanImages[direction][curFace];
 	}
 
 	public void setDirection(int direction){
