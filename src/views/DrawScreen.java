@@ -30,7 +30,7 @@ public class DrawScreen extends JPanel{
 		// Draw Border
 		g.setColor(Color.BLUE);
 		g.drawRoundRect(2, 2, 636, 476, 10, 10);
-		g.drawRoundRect(6, 6, 628, 468, 10, 10);
+		g.drawRoundRect(18, 18, 604, 444, 10, 10);
 
 		// Draw Pacman
 		g.drawImage(pacman.getGraphic(), pacman.getPositionX(),
