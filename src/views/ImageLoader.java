@@ -1,16 +1,22 @@
-package models;
+package views;
 
 import javax.imageio.ImageIO;
-import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
 /**
- * Author:      Grant Kurtz
+ * @author Jenny Zhen
+ * @author Grant Kurtz
+ * date: 04.27.13
+ * language: Java
+ * file: ImageLoader.java
+ * project: Pac-man
+ *          Implementation of the classic Pac-Man game in Java.
  */
-public class ImageLoader{
+
+public class ImageLoader {
 
 	private BufferedImage compositeImage;
 
