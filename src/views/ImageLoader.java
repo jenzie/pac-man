@@ -26,7 +26,7 @@ public class ImageLoader {
 
 	private ImageLoader(){
 		try{
-			compositeImage = ImageIO.read(new File("images/pacman.png"));
+			compositeImage = ImageIO.read(new File("src/images/pacman.png"));
 		}
 		catch(IOException e){
 			e.printStackTrace();
