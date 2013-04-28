@@ -56,7 +56,11 @@ public class Game{
 		}
 
 		tileX = map.resolveTile(newPositionX);
+		if(pacman.getDirection() == 2)
+			tileX++;
 		tileY = map.resolveTile(newPositionY);
+		if(pacman.getDirection() == 3)
+					tileY++;
 		if(map.isEmpty(tileX, tileY)){
 			pacman.setPositionX(newPositionX);
 			pacman.setPositionY(newPositionY);
