@@ -39,7 +39,7 @@ public class PlayGUI extends JFrame{
 		frame = new JFrame("Pac-man");
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		frame.add(new DrawScreen());
+		frame.add(new DrawScreen(pacman));
 		frame.setSize(640, 480);
 		
 	}

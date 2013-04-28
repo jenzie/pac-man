@@ -9,13 +9,19 @@
 
 package models;
 
+import java.awt.*;
 import java.util.ArrayList;
 
 public class Pacman {
+
+	private Image[][] pacmanImages;
 	
 	public Pacman() {
-		
+		ImageLoader loader = ImageLoader.getImageLoaderInstance();
+		pacmanImages = loader.getPacManImages();
 	}
 
-	
+	public Image getGraphic(){
+		return pacmanImages[0][1];
+	}
 }
