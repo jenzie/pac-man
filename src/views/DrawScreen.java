@@ -19,10 +19,19 @@ public class DrawScreen extends JPanel{
 	public void paint(Graphics g){
 		super.paintComponent(g);
 		setBackground(Color.BLACK);
-		g.drawImage(pacman.getGraphic(), 0, 0, null);
+
+		// Draw Border
+		g.setColor(Color.BLUE);
+		g.drawRoundRect(2, 2, 636, 476, 10, 10);
+		g.drawRoundRect(6, 6, 628, 468, 10, 10);
+
+		// Draw Pacman
+		g.drawImage(pacman.getGraphic(), pacman.getPositionX(),
+					pacman.getPositionY(), null);
+		System.out.println(pacman.getPositionX() + " " + pacman.getPositionY());
 	}
 	
 	public Dimension getPreferredSize(){
-		return new Dimension(640, 480);
+		return new Dimension(641, 481);
 	}
 }

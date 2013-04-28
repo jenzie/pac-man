@@ -11,16 +11,22 @@ package views;
 
 import javax.swing.*;   // JButton, JFrame
 import java.awt.*;  // BorderLayout, GridLayout, Container
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 import models.Pacman; // Pac-man model
 
 /**
  * This is the interface for the player to actually play the game.
  */
-public class PlayGUI extends JFrame{
+public class PlayGUI extends JFrame implements KeyListener, ActionListener{
 	private static final long serialVersionUID = 1L;
 	private Pacman pacman; // pac-man instance
 	private JFrame frame; // the window
+	private int currentDirection = 0;
+	private DrawScreen screen;
 
 	/**
 	 * Constructor to create an instance of PlayGUI.
@@ -38,10 +44,11 @@ public class PlayGUI extends JFrame{
 		//creates new window
 		frame = new JFrame("Pac-man");
 		frame.setVisible(true);
-		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		frame.add(new DrawScreen(pacman));
-		frame.setSize(640, 480);
-		
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		screen = new DrawScreen(pacman);
+		frame.add(screen);
+		frame.addKeyListener(this);
+		frame.pack();
 	}
 	
 	/**
@@ -53,5 +60,22 @@ public class PlayGUI extends JFrame{
 		frame.setPreferredSize(new Dimension(width, height));
 		frame.setMinimumSize(new Dimension(width, height));
 		frame.setMaximumSize(new Dimension(width, height));
+	}
+
+	public void keyTyped(KeyEvent e){
+	}
+
+	public void keyPressed(KeyEvent e){
+		if(e.getKeyCode() > 36 && e.getKeyCode() < 41){
+			currentDirection = e.getKeyCode() - 37;
+			pacman.setDirection(currentDirection);
+		}
+	}
+
+	public void keyReleased(KeyEvent e){
+	}
+
+	public void actionPerformed(ActionEvent e){
+		screen.repaint();
 	}
 }
