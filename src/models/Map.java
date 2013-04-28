@@ -21,8 +21,9 @@ public class Map{
 	}
 
 	private void createBasicMap(){
-		for(int i = 0; i < 32; i++)
+		for(int i = 0; i < 32; i++){
 			Arrays.fill(board[i], Tile.EMPTY);
+		}
 
 		for(int i = 0; i < 24; i++){
 			board[0][i] = Tile.WALL;
@@ -40,5 +41,9 @@ public class Map{
 
 	public boolean isEmpty(int x, int y){
 		return board[x][y] == Tile.EMPTY;
+	}
+
+	public Tile[][] getMap(){
+		return board;
 	}
 }

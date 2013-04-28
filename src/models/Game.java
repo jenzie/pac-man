@@ -12,12 +12,12 @@ public class Game{
 	private final Map map;
 	private ActionListener listener;
 
-	public Game(Pacman pacman, ActionListener listener){
+	public Game(Pacman pacman, ActionListener listener, Map map){
 		this.pacman = pacman;
 		pacman.setPositionX(20);
 		pacman.setPositionY(20);
 		this.listener = listener;
-		this.map = new Map();
+		this.map = map;
 	}
 
 	public void run(){
@@ -64,6 +64,7 @@ public class Game{
 		if(map.isEmpty(tileX, tileY)){
 			pacman.setPositionX(newPositionX);
 			pacman.setPositionY(newPositionY);
+			pacman.addDelay();
 		}
 	}
 }

@@ -27,7 +27,6 @@ public class Pacman {
 	}
 
 	public Image getGraphic(){
-		delay += 1;
 		if(delay > 10){
 			delay = 0;
 			curFace = (curFace + 1) % 2;
@@ -57,5 +56,9 @@ public class Pacman {
 
 	public int getDirection(){
 		return direction;
+	}
+
+	public void addDelay(){
+		delay++;
 	}
 }
