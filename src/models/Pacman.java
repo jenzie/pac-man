@@ -1,6 +1,6 @@
 /**
  * @author Jenny Zhen
- * date: 02.23.12
+ * date: 02.23.13
  * language: Java
  * file: Pacman.java
  * project: Pac-man
@@ -9,8 +9,9 @@
 
 package models;
 
+import views.ImageLoader;
+
 import java.awt.*;
-import java.util.ArrayList;
 
 public class Pacman {
 

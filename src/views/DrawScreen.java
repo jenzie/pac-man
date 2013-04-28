@@ -1,11 +1,18 @@
+/**
+ * @author Jenny Zhen
+ * date: 02.23.13
+ * language: Java
+ * file: DrawScreen.java
+ * project: Pac-man
+ *          Implementation of the classic Pac-Man game in Java.
+ */
+
 package views;
 
 import models.Pacman;
-
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
-
 import javax.swing.JPanel;
 
 public class DrawScreen extends JPanel{

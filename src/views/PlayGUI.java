@@ -1,6 +1,6 @@
 /**
  * @author Jenny Zhen
- * date: 02.23.12
+ * date: 02.23.13
  * language: Java
  * file: PlayGUI.java
  * project: Pac-man
