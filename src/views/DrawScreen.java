@@ -9,18 +9,23 @@
 
 package views;
 
+import models.Map;
 import models.Pacman;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import javax.swing.JPanel;
 
+import static models.Map.Tile.WALL;
+
 public class DrawScreen extends JPanel{
 
 	private Pacman pacman;
+	private Map map;
 
-	public DrawScreen(Pacman pacman){
+	public DrawScreen(Pacman pacman, Map map){
 		this.pacman = pacman;
+		this.map = map;
 	}
 
 	public void paint(Graphics g){
@@ -29,13 +34,19 @@ public class DrawScreen extends JPanel{
 
 		// Draw Border
 		g.setColor(Color.BLUE);
-		g.drawRoundRect(2, 2, 636, 476, 10, 10);
-		g.drawRoundRect(6, 6, 628, 468, 10, 10);
+		for(int i = 0; i < 32; i++){
+			for(int k = 0; k < 24; k++){
+				switch(map.getMap()[i][k]){
+					case WALL:
+						g.drawRoundRect(20 * i, 20 * k, 20, 20, 5, 5);
+						break;
+				}
+			}
+		}
 
 		// Draw Pacman
-		g.drawImage(pacman.getGraphic(), pacman.getPositionX(),
-					pacman.getPositionY(), null);
-		System.out.println(pacman.getPositionX() + " " + pacman.getPositionY());
+		g.drawImage(pacman.getGraphic(), pacman.getPositionX() + 5,
+					pacman.getPositionY() + 5, null);
 	}
 	
 	public Dimension getPreferredSize(){

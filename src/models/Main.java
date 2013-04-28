@@ -14,8 +14,9 @@ import views.*;
 public class Main {
 	public static void main(String[] args){
 		Pacman pacman = new Pacman();
-		PlayGUI play = new PlayGUI(pacman);
-		Game game = new Game(pacman, play);
+		Map map = new Map();
+		PlayGUI play = new PlayGUI(pacman, map);
+		Game game = new Game(pacman, play, map);
 		game.run();
 	}
 }

@@ -16,6 +16,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import models.Map;
 import models.Pacman; // Pac-man model
 
 /**
@@ -24,6 +25,7 @@ import models.Pacman; // Pac-man model
 public class PlayGUI extends JFrame implements KeyListener, ActionListener{
 	private static final long serialVersionUID = 1L;
 	private Pacman pacman; // pac-man instance
+	private Map map;
 	private JFrame frame; // the window
 	private int currentDirection = 0;
 	private DrawScreen screen;
@@ -31,9 +33,11 @@ public class PlayGUI extends JFrame implements KeyListener, ActionListener{
 	/**
 	 * Constructor to create an instance of PlayGUI.
 	 * @param pacman instance of Pacman
+	 * @param map
 	 */
-	public PlayGUI(Pacman pacman) {
+	public PlayGUI(Pacman pacman, Map map) {
 		this.pacman = pacman;
+		this.map = map;
 		createPlayGUI();
 	}
 	
@@ -45,7 +49,7 @@ public class PlayGUI extends JFrame implements KeyListener, ActionListener{
 		frame = new JFrame("Pac-man");
 		frame.setVisible(true);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		screen = new DrawScreen(pacman);
+		screen = new DrawScreen(pacman, map);
 		frame.add(screen);
 		frame.addKeyListener(this);
 		frame.pack();
