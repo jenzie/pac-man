@@ -10,12 +10,9 @@
 
 package views;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
 public class ImageLoader {
 
@@ -37,22 +34,14 @@ public class ImageLoader {
 	public Image[][] getPacManImages(){
 		if(pacManImages == null){
 			pacManImages = new Image[4][2];
-			pacManImages[0][0] = new ImageIcon(getClass().getResource(
-					"/images/pacman_west1.png")).getImage();
-			pacManImages[0][1] = new ImageIcon(getClass().getResource(
-								"/images/pacman_west2.png")).getImage();
-			pacManImages[1][0] = new ImageIcon(getClass().getResource(
-								"/images/pacman_north1.png")).getImage();
-			pacManImages[1][1] = new ImageIcon(getClass().getResource(
-								"/images/pacman_north2.png")).getImage();
-			pacManImages[2][0] = new ImageIcon(getClass().getResource(
-								"/images/pacman_east1.png")).getImage();
-			pacManImages[2][1] = new ImageIcon(getClass().getResource(
-								"/images/pacman_east2.png")).getImage();
-			pacManImages[3][0] = new ImageIcon(getClass().getResource(
-								"/images/pacman_south1.png")).getImage();
-			pacManImages[3][1] = new ImageIcon(getClass().getResource(
-								"/images/pacman_south2.png")).getImage();
+			pacManImages[0][0] = new ImageIcon(getClass().getResource("/images/pacman/pacman_west1.png")).getImage();
+			pacManImages[0][1] = new ImageIcon(getClass().getResource("/images/pacman/pacman_west2.png")).getImage();
+			pacManImages[1][0] = new ImageIcon(getClass().getResource("/images/pacman/pacman_north1.png")).getImage();
+			pacManImages[1][1] = new ImageIcon(getClass().getResource("/images/pacman/pacman_north2.png")).getImage();
+			pacManImages[2][0] = new ImageIcon(getClass().getResource("/images/pacman/pacman_east1.png")).getImage();
+			pacManImages[2][1] = new ImageIcon(getClass().getResource("/images/pacman/pacman_east2.png")).getImage();
+			pacManImages[3][0] = new ImageIcon(getClass().getResource("/images/pacman/pacman_south1.png")).getImage();
+			pacManImages[3][1] = new ImageIcon(getClass().getResource("/images/pacman/pacman_south2.png")).getImage();
 		}
 		return pacManImages;
 	}
