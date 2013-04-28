@@ -1,11 +1,3 @@
-package views;
-
-import javax.imageio.ImageIO;
-import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-
 /**
  * @author Jenny Zhen
  * @author Grant Kurtz
@@ -15,6 +7,14 @@ import java.io.IOException;
  * project: Pac-man
  *          Implementation of the classic Pac-Man game in Java.
  */
+
+package views;
+
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 public class ImageLoader {
 
@@ -43,14 +43,14 @@ public class ImageLoader {
 	public Image[][] getPacManImages(){
 		if(pacManImages == null){
 			pacManImages = new Image[4][2];
-			pacManImages[0][0] = compositeImage.getSubimage(3, 3, 13, 13);
-			pacManImages[0][1] = compositeImage.getSubimage(23, 3, 13, 13);
-			pacManImages[1][0] = compositeImage.getSubimage(3, 3, 13, 13);
-			pacManImages[1][1] = compositeImage.getSubimage(3, 3, 13, 13);
-			pacManImages[2][0] = compositeImage.getSubimage(3, 3, 13, 13);
-			pacManImages[2][1] = compositeImage.getSubimage(3, 3, 13, 13);
-			pacManImages[3][0] = compositeImage.getSubimage(3, 3, 13, 13);
-			pacManImages[3][1] = compositeImage.getSubimage(3, 3, 13, 13);
+			pacManImages[0][0] = compositeImage.getSubimage(2, 2, 15, 15);
+			pacManImages[0][1] = compositeImage.getSubimage(25, 2, 15, 15);
+			pacManImages[1][0] = compositeImage.getSubimage(43, 2, 15, 15);
+			pacManImages[1][1] = compositeImage.getSubimage(2, 23, 15, 15);
+			pacManImages[2][0] = compositeImage.getSubimage(21, 23, 15, 15);
+			pacManImages[2][1] = compositeImage.getSubimage(3, 3, 15, 15);
+			pacManImages[3][0] = compositeImage.getSubimage(3, 3, 15, 15);
+			pacManImages[3][1] = compositeImage.getSubimage(3, 3, 15, 15);
 		}
 		return pacManImages;
 	}
